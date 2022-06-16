@@ -9,17 +9,35 @@
     <title>Photo maker</title>
     <link rel="stylesheet" href="style.css" />
     <script src="layout.js"></script>
+    <script src="camera.js"></script>
+    <script>
+      addEventListener("load", () => {
+        dbg = document.getElementById("dbg");
+        console.log(dbg);
+        setDocHeight();
+        setTimeout(function () {
+          // This hides the address bar:
+          window.scrollTo(0, 1);
+        }, 0);
+        clearPhoto();
+      });
+    </script>
   </head>
   <body class="light-theme">
     <div class="container">
       <div class="card card-main card-camera card-cortners">
+        <div class="video-container">
+          <video id="cam" autoplay muted playsinline>Not available</video>
+          <img id="photo" />
+        </div>
+        <canvas id="canvas" style="display: none"></canvas>
         <div class="controls controls-leafs"></div>
       </div>
       <div class="controls controls-shutter">
         <button class="button-open-photos camera-roll"></button>
         <button
           class="button-take-photo shutter"
-          ontouchstart=""
+          onclick="takePhoto()"
           style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0)"
         >
           <div class="button-take-photo-inside"></div>
