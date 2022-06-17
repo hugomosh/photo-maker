@@ -3,8 +3,8 @@ let mediaStream = null;
 let constraints = {
   audio: false,
   video: {
-    width: { ideal: 640 },
-    height: { ideal: 480 },
+    width: { ideal: 200 },
+    height: { ideal: 400 },
     facingMode: "environment",
   },
 };
