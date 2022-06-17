@@ -13,4 +13,3 @@ const setDocHeight = () => {
 setDocHeight();
 addEventListener("resize", setDocHeight);
 addEventListener("orientationchange", setDocHeight);
-

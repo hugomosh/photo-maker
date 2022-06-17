@@ -77,6 +77,7 @@ async function takePhoto() {
 }
 
 function clearPhoto() {
+  console.log("clearPhoto");
   let canvas = document.getElementById("canvas");
   let photo = document.getElementById("photo");
   let context = canvas.getContext("2d");
@@ -84,6 +85,5 @@ function clearPhoto() {
   context.fillStyle = "transparent";
   context.fillRect(0, 0, canvas.width, canvas.height);
   var data = canvas.toDataURL("image/png");
-  photo.setAttribute("src", data);
+  photo.removeAttribute("src");
 }
-clearPhoto();

@@ -130,7 +130,36 @@ button {
   left: -10px;
 }
 
+.button-close-photo {
+  position: absolute;
+  width: var(--carousel-width);
+  height: var(--carousel-width);
+  border-radius: 10px;
+  color: transparent;
+  border: 0px solid white;
+  top: 20px;
+  bottom: 0;
+  right: 20px;
+}
 
+.button-close-photo:hover {
+  opacity: 1;
+}
+.button-close-photo:before,
+.button-close-photo:after {
+  position: absolute;
+  content: " ";
+  height: 33px;
+  width: 2px;
+  top: 2px;
+  background-color: var(--color-ligth);
+}
+.button-close-photo:before {
+  transform: rotate(45deg);
+}
+.button-close-photo:after {
+  transform: rotate(-45deg);
+}
 
 .video-container {
   position: absolute;
